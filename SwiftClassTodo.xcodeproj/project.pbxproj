@@ -13,6 +13,7 @@
 		4F03AD601971AC4300ADD54C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F03AD5E1971AC4300ADD54C /* Main.storyboard */; };
 		4F03AD621971AC4300ADD54C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F03AD611971AC4300ADD54C /* Images.xcassets */; };
 		4F03AD6E1971AC4400ADD54C /* SwiftClassTodoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F03AD6D1971AC4400ADD54C /* SwiftClassTodoTests.swift */; };
+		4F03AD7A1971B40600ADD54C /* Task.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F03AD791971B40600ADD54C /* Task.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,9 @@
 		4F03AD671971AC4300ADD54C /* SwiftClassTodoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftClassTodoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F03AD6C1971AC4400ADD54C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4F03AD6D1971AC4400ADD54C /* SwiftClassTodoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftClassTodoTests.swift; sourceTree = "<group>"; };
+		4F03AD771971B40600ADD54C /* SwiftClassTodo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SwiftClassTodo-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
+		4F03AD781971B40600ADD54C /* Task.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Task.h; path = ../Task.h; sourceTree = "<group>"; };
+		4F03AD791971B40600ADD54C /* Task.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Task.m; path = ../Task.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,11 +81,14 @@
 		4F03AD551971AC4300ADD54C /* SwiftClassTodo */ = {
 			isa = PBXGroup;
 			children = (
+				4F03AD781971B40600ADD54C /* Task.h */,
+				4F03AD791971B40600ADD54C /* Task.m */,
 				4F03AD581971AC4300ADD54C /* AppDelegate.swift */,
 				4F03AD5A1971AC4300ADD54C /* MasterViewController.swift */,
 				4F03AD5C1971AC4300ADD54C /* DetailViewController.swift */,
 				4F03AD5E1971AC4300ADD54C /* Main.storyboard */,
 				4F03AD611971AC4300ADD54C /* Images.xcassets */,
+				4F03AD771971B40600ADD54C /* SwiftClassTodo-Bridging-Header.h */,
 				4F03AD561971AC4300ADD54C /* Supporting Files */,
 			);
 			path = SwiftClassTodo;
@@ -211,6 +218,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F03AD7A1971B40600ADD54C /* Task.m in Sources */,
 				4F03AD5D1971AC4300ADD54C /* DetailViewController.swift in Sources */,
 				4F03AD5B1971AC4300ADD54C /* MasterViewController.swift in Sources */,
 				4F03AD591971AC4300ADD54C /* AppDelegate.swift in Sources */,
@@ -331,9 +339,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = SwiftClassTodo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SwiftClassTodo-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -342,9 +353,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = SwiftClassTodo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SwiftClassTodo-Bridging-Header.h";
 			};
 			name = Release;
 		};
